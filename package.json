@@ -1,0 +1,16 @@
+{
+  "name": "mappings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node printMappings.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mojaloop/ml-schema-transformer-lib": "^2.0.1",
+    "chalk": "^5.3.0"
+  }
+}
