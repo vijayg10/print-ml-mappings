@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import { fxTransfers, fxQuotes, quotes, transfers, discovery, fxTransfers_reverse, fxQuotes_reverse, quotes_reverse, transfers_reverse, discovery_reverse } from './node_modules/@mojaloop/ml-schema-transformer-lib/dist/mappings/fspiopiso20022/index.mjs';
+import * as Mappings from './node_modules/@mojaloop/ml-schema-transformer-lib/dist/mappings/fspiopiso20022/index.mjs';
 
 // Function to parse mappings into nested objects and ignore modifiers
 function parseMappings(mappingInput) {
@@ -80,4 +80,7 @@ function printResourceMapping (resource) {
   }
 }
 
-printResourceMapping(fxTransfers);
+// Read resource name from command line arguments and pass it to the printResourceMapping function
+const resource = process.argv[2];
+
+printResourceMapping(Mappings[resource]);
